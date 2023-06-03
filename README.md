@@ -29,6 +29,18 @@ Se compone de el precio del Gas Natural, la potencia generada de las energías r
 
 - Hidráulica, Eólica, Solar (Fotovoltaica y Térmica),Otras Renovables, Residuos Renovables, Gas Natural, Uranio, EUA Spot
 
+### Precio de la eléctricidad en España 
+
+![preciomwh](./pics/preciomwh.png)
+
+### Predicción precio Gas Natural
+
+Tas probar distintos modelos el que mejor se ajusta a la realidad es el XGB Boosting, se muestran los resultados para los próximos cinco días
+
+![preciomwh](./pics/predicciongasn.png)
+
+rmse: 0.1258590053674676
+
 ### Modelos testeados
 
 1. Prophet
