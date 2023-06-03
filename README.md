@@ -3,31 +3,36 @@ Predicción con Machine Learning del precio de la electricidad en España
 
 # Resumen
 
-El proyecto abarca la implementación de un modelo de aprendizaje automático o análisis de datos que se centra en modelar la serie de precios del mercado eléctrico. Este mercado mayorista presenta ciertas imperfecciones debido a restricciones técnicas y la existencia de mercados secundarios para regular los desajustes en la oferta y demanda de energía. El objetivo es predecir esta serie de precios con el fin de ofrecer mejores ofertas de precio fijo a los clientes y reducir los riesgos financieros asociados.
-
-Para abordar este problema, se ha realizado la extracción de datos utilizando diferentes métodos y se ha llevado a cabo un proceso de limpieza y tratamiento de los mismos.
+En el mercado eléctrico español, los agentes intercambian energía para cada hora del día siguiente. Las ofertas de compra y venta de energía se utilizan para construir las curvas de oferta y demanda, y el precio y volumen de la energía intercambiada dependen de la intersección entre estas curvas. Una vez que se realiza la casación de las curvas, se establecen los compromisos de entrega de energía y se determina el precio para cada franja horaria. La forma y valor de estas curvas están influenciados por varios factores, como la climatología que afecta la disponibilidad de energías renovables, el precio de los combustibles fósiles y los derechos de emisión de CO2. Por otro lado, la curva de compra está determinada principalmente por la demanda de electricidad de las comercializadoras y los grandes consumidores industriales.
 
 Una vez que los datos están preparados, se plantea resolver el problema utilizando modelos de aprendizaje automático. Se mencionan algunos de estos modelos utilizados, como Prophet, SARIMA, ARIMA y árboles de regresión. Estos modelos se emplean para predecir el precio de la electricidad y se utilizan como enfoques iniciales en el proyecto.
 
 ## Objetivo
 
-Predecir el precio en 24 horas
-
-
+El objetivo principal del trabajo es conocer el precio de la electricidad para el día siguiente además de 
 
 # Metodología
 
-### Datasets
+### Dataset
 
-Se han probado distintos modelos para predecir el precio de la electricidad
+Para conocer el precio de la electricidad se van a realizar predicciones previas sobre la potencia generada de las energías renovables, sobre el precio del uranio y el precio del Gas Natural. Por lo tanto se han hecho modelos de Machine Learning para predecir cada una de estas variables y con el conjunto obtener el precio de la electricidad para el día siguiente. La justificación de este método es que la energía en España se compone principalmente de las renovables, la nuclear y del gas natural. Por lo tanto estas variables tienen una alta correlación con el precio de la electricidad.
+
+Composición de las energias renovables: Hidráulica, Eólica, Solar (Fotovoltaica y Térmica),Otras Renovables, Residuos Renovables, Gas Natural, Uranio, EUA Spot
 
 1. Escenario 1
 
-Previamente a la elección de moldelos se realizan análisis de la estacionaridad de las variables como el test de dickey-fuller
+### Modelos testeados
 
-Se compone de el precio del Gas Natural, la potencia generada de las energías renovables y el precio del Uranio. Por lo tanto se han hecho modelos de Machine Learning para predecir cada una de estas variables y con el conjunto obtener el precio de la electricidad para el día siguiente. La justificación de este método es que la energía en España se compone principalmente de las renovables, la nuclear y del gas natural. Por lo tanto estas variables tienen una alta correlación con el precio de la electricidad.
+1. Prophet
+2. Arboles de decisión 
+3. XGB Boosting
+4. ARIMA, SARIMA
 
-- Hidráulica, Eólica, Solar (Fotovoltaica y Térmica),Otras Renovables, Residuos Renovables, Gas Natural, Uranio, EUA Spot
+Se evaluan distintas métricas de evaluación como 
+- rmse
+- r2
+- mae
+
 
 ### Precio de la eléctricidad en España 
 
@@ -45,16 +50,9 @@ rmse: 0.1258590053674676
 
 ![prediccionuranio](./pics/prediccionuranio.png)
 
-### Modelos testeados
-
-1. Prophet
-2. Arboles de decisión 
-3. XGB Boosting
-4. ARIMA, SARIMA
-
 ### Predicción energías renovables
 
-
+El modelo que mejor se ajusta a la energía hidraulica y solar es Prophet 
 
 ![prediccionuranio](./pics/hidraulica.png)
 
