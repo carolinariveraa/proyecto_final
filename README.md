@@ -19,22 +19,20 @@ Para conocer el precio de la electricidad se van a realizar predicciones previas
 
 Composición de las energias renovables: Hidráulica, Eólica, Solar (Fotovoltaica y Térmica),Otras Renovables, Residuos Renovables, Gas Natural, Uranio, EUA Spot
 
-1. Escenario 1
-
-### Modelos testeados
+Modelos testeados:
 
 1. Prophet
 2. Arboles de decisión 
 3. XGB Boosting
 4. ARIMA, SARIMA
 
-Se evaluan distintas métricas de evaluación como 
+Métricas de evaluación:
 - rmse
 - r2
 - mae
 
 
-### Precio de la eléctricidad en España 
+### Evolución precio de la eléctricidad en España 
 
 ![preciomwh](./pics/preciomwh.png)
 
