@@ -41,12 +41,24 @@ Tas probar distintos modelos el que mejor se ajusta a la realidad es el XGB Boos
 
 rmse: 0.1258590053674676
 
+### Predicción precio Uranio
+
+![prediccionuranio](./pics/prediccionuranio.png)
+
 ### Modelos testeados
 
 1. Prophet
 2. Arboles de decisión 
 3. XGB Boosting
 4. ARIMA, SARIMA
+
+### Predicción energías renovables
+
+
+
+![prediccionuranio](./pics/hidraulica.png)
+
+![prediccionuranio](./pics/solar.png)
 
 ### Fuentes de información
 
