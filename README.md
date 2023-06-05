@@ -1,4 +1,4 @@
-# proyecto_final
+# Mercado eléctrico español
 Predicción con Machine Learning del precio de la electricidad en España
 
 # Resumen
@@ -17,44 +17,38 @@ El objetivo principal del trabajo es conocer el precio de la electricidad para e
 
 Para conocer el precio de la electricidad se van a realizar predicciones previas sobre la potencia generada de las energías renovables, sobre el precio del uranio y el precio del Gas Natural. Por lo tanto se han hecho modelos de Machine Learning para predecir cada una de estas variables y con el conjunto obtener el precio de la electricidad para el día siguiente. La justificación de este método es que la energía en España se compone principalmente de las renovables, la nuclear y del gas natural. Por lo tanto estas variables tienen una alta correlación con el precio de la electricidad.
 
-Composición de las energias renovables: Hidráulica, Eólica, Solar (Fotovoltaica y Térmica),Otras Renovables, Residuos Renovables, Gas Natural, Uranio, EUA Spot
-
-Modelos testeados:
-
-1. Prophet
-2. Arboles de decisión 
-3. XGB Boosting
-4. ARIMA, SARIMA
-
-Métricas de evaluación:
-- rmse
-- r2
-- mae
 
 
 ### Evolución precio de la eléctricidad en España 
 
 ![preciomwh](./pics/preciomwh.png)
 
-### Predicción precio Gas Natural
+<details>
+<summary>Predicción precio Gas Natural</summary>
 
 Tas probar distintos modelos el que mejor se ajusta a la realidad es el XGB Boosting, se muestran los resultados para los próximos cinco días
 
 ![preciomwh](./pics/predicciongasn.png)
 
 rmse: 0.1258590053674676
+</details>
 
-### Predicción precio Uranio
+<details>
+<summary>Predicción precio Uranio</summary>
 
 ![prediccionuranio](./pics/prediccionuranio.png)
+</details>
 
-### Predicción energías renovables
+<details>
+<summary>Predicción energías renovables</summary>
 
 El modelo que mejor se ajusta a la energía hidraulica y solar es Prophet 
 
 ![prediccionuranio](./pics/hidraulica.png)
 
 ![prediccionuranio](./pics/solar.png)
+</details>
+
 
 ### Fuentes de información
 
