@@ -63,10 +63,14 @@ El modelo que mejor se ajusta a la energía hidraulica y solar es Prophet
 
 ### Fuentes de información
 
-Red Eléctrica de España (https://www.esios.ree.es/es)
+* Red Eléctrica de España (https://www.esios.ree.es/es)
 
-Plataforma de inversión con los históricos (https://www.investing.com/)
-- Gas Natural
-- Derechos de emisión del CO2
-- Indice Brent 
-- Uranio
+* Plataforma de inversión con los históricos (https://www.investing.com/)
+    - Gas Natural
+    - Derechos de emisión del CO2
+    - Indice Brent 
+    - Uranio
+
+* Datos climatologicos 
+
+    - AEMET
