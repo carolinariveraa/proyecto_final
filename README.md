@@ -24,6 +24,15 @@ Para conocer el precio de la electricidad se van a realizar predicciones previas
 ![preciomwh](./pics/preciomwh.png)
 
 <details>
+<summary>Predicción Demanda</summary>
+
+El modelo que mejor se ajusta a la demanda es ETS ya que tiene un periodo estacional de 7 días
+
+![demanda](./pics/predemanda.png)
+
+</details>
+
+<details>
 <summary>Predicción precio Gas Natural</summary>
 
 Tas probar distintos modelos el que mejor se ajusta a la realidad es el XGB Boosting, se muestran los resultados para los próximos cinco días
