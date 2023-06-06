@@ -11,14 +11,20 @@ Una vez que los datos están preparados, se plantea resolver el problema utiliza
 
 ## Objetivo
 
-El objetivo principal del trabajo es conocer el precio de la electricidad para el día siguiente además de 
+El objetivo principal del trabajo es conocer el precio de la electricidad para el día siguiente. 
 
 # Metodología
 
 ### Dataset
 
-Para conocer el precio de la electricidad se van a realizar predicciones previas sobre la potencia generada de las energías renovables, la demanda, sobre el precio del uranio y el precio del Gas Natural. Por lo tanto se han hecho modelos de Machine Learning para predecir cada una de estas variables y con el conjunto obtener el precio de la electricidad para el día siguiente. La justificación de este método es que la energía en España se compone principalmente de las renovables, la nuclear y del gas natural. Por lo tanto estas variables tienen una alta correlación con el precio de la electricidad.
+Para conocer el precio de la electricidad se van a realizar predicciones previas sobre:
 
+- Potencia generada de las energías renovables,
+- Demanda, 
+- Precio del uranio 
+- Precio del Gas Natural
+
+Por lo tanto se han hecho modelos de Machine Learning para predecir cada una de estas variables y con el conjunto obtener el precio de la electricidad para el día siguiente. La justificación de este método es que la energía en España se compone principalmente de las renovables, la nuclear y del gas natural. Por lo tanto estas variables tienen una alta correlación con el precio de la electricidad.
 
 
 ### Evolución precio de la eléctricidad en España 
