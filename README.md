@@ -7,7 +7,7 @@ Predicción con Machine Learning del precio de la electricidad en España
 
 En el mercado eléctrico español, los agentes intercambian energía para cada hora del día siguiente. Las ofertas de compra y venta de energía se utilizan para construir las curvas de oferta y demanda, y el precio y volumen de la energía intercambiada dependen de la intersección entre estas curvas. Una vez que se realiza la casación de las curvas, se establecen los compromisos de entrega de energía y se determina el precio para cada franja horaria. La forma y valor de estas curvas están influenciados por varios factores, como la climatología que afecta la disponibilidad de energías renovables, el precio de los combustibles fósiles y los derechos de emisión de CO2. Por otro lado, la curva de compra está determinada principalmente por la demanda de electricidad de las comercializadoras y los grandes consumidores industriales.
 
-Una vez que los datos están preparados, se plantea resolver el problema utilizando modelos de aprendizaje automático. Se mencionan algunos de estos modelos utilizados, como Prophet, SARIMA, ARIMA y árboles de regresión. Estos modelos se emplean para predecir el precio de la electricidad y se utilizan como enfoques iniciales en el proyecto.
+Una vez que los datos están preparados, se plantea resolver el problema utilizando modelos de aprendizaje automático. Se mencionan algunos de estos modelos utilizados, como Prophet, ETS,  SARIMA, ARIMA y árboles de regresión. Estos modelos se emplean para predecir el precio de la electricidad y se utilizan como enfoques iniciales en el proyecto.
 
 ## Objetivo
 
@@ -64,8 +64,13 @@ El modelo que mejor se ajusta a la energía hidraulica y solar es Prophet
 ### Fuentes de información
 
 * Red Eléctrica de España (https://www.esios.ree.es/es)
+    - EUA Spot
+    - Potencia generada
+    - Demanda
+
 
 * Plataforma de inversión con los históricos (https://www.investing.com/)
+
     - Gas Natural
     - Derechos de emisión del CO2
     - Indice Brent 
