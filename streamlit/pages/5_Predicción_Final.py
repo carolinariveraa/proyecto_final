@@ -10,10 +10,33 @@ from math import sqrt
 import datetime
 import re
 import base64
+from PIL import Image
 
 st.title("Predicción precio eléctricidad")
 
-st.title("Dataset final")
+st.image(Image.open('pics/pig.jpg'))
+
+
+st.subheader("Importancia de las variables")
+
+with st.expander("Precio del Gas Natural"):
+
+        # Cajas independientes
+    st.info("Muchas plantas de generación de energía utilizan gas natural como combustible. Si el precio del gas natural aumenta, se refleje en un aumento en el costo de generación de energía")
+
+with st.expander("Precio del Uranio"):
+
+    st.info("Si el precio del Uranio aumenta, será más costoso la generación de energía nuclear lo que se traduce en una subida del precio de la energía")
+
+with st.expander("Generación de Energías Renovables"):
+
+    st.info("Estas fuentes de energía son menos dependientes de los combustibles fósiles y están sujetas a condiciones climáticas y ambientales. Por ejemplo, un aumento en la generación de energía eólica debido a condiciones climáticas favorables puede resultar en una mayor oferta de energía y, por lo tanto, en una reducción del precio de la energía en el mercado.")
+
+with st.expander("Demanda de Energía"):
+
+    st.info("Si la demanda de energía es alta y supera la capacidad de generación, es probable que esto conduzca a un aumento en el precio de la energía. Por el contrario, si la demanda es baja, es posible que se observe una disminución en el precio de la energía.")
+
+st.subheader("Dataset final")
 
 dataset = pd.read_csv('data/dataset.csv')
 dataset = dataset.drop(columns=['Unnamed: 0'])

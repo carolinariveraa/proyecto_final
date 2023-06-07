@@ -11,9 +11,17 @@ import re
 import base64
 from PIL import Image
 
-st.title("Predicción Demanda")
+st.title("Precio del Uranio")
 
-st.write("El objetivo es ppredecir el precio de la eléctricidad para el día siguiente")
+st.image(Image.open('pics/nuclear.jpeg'))
+
+with st.expander("El aumento de los precios del uranio puede ser atribuido a varios factores:"):
+
+        # Cajas independientes
+    st.info("Demanda creciente: A medida que más países buscan aumentar su capacidad de generación de energía nuclear o ampliar sus programas existentes, la demanda de uranio aumenta.")
+    st.success("Restricciones de suministro: Algunos países productores de uranio han impuesto restricciones a la exportación o han reducido su producción, lo que ha llevado a una disminución en la disponibilidad del mineral en el mercado global.")
+    st.warning("Especulación en el mercado: Los inversores y especuladores pueden anticipar un aumento en la demanda futura o una escasez de suministro y comprar uranio como una inversión a largo plazo, lo que puede elevar los precios.")
+    st.info("Cambios en las políticas nucleares: Las decisiones políticas y regulatorias también pueden tener un impacto en los precios del uranio.")
 
 uranio = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\uranio_clean.csv')
 uranio_pred = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\uranio_pred.csv')

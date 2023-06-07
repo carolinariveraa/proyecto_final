@@ -11,9 +11,15 @@ import re
 import base64
 from PIL import Image
 
-st.title("Predicción Demanda")
+st.title("Demanda energetica Gwh")
 
-st.write("El objetivo es ppredecir el precio de la eléctricidad para el día siguiente")
+st.image(Image.open('pics/men.jpg'))
+
+st.markdown("""
+La predicción de la demanda en el mercado eléctrico español es una herramienta importante para planificar y gestionar eficientemente la generación y distribución de energía eléctrica.
+
+La predicción de la demanda eléctrica permite a los operadores del mercado tomar decisiones informadas sobre la producción y distribución de energía, optimizando la capacidad de generación, planificando el mantenimiento de infraestructuras y evitando situaciones de sobrecarga o escasez de suministro. También es útil para los consumidores, ya que les permite ajustar su consumo de acuerdo con las previsiones y aprovechar los periodos de menor demanda para reducir costos.
+""")
 
 demanda = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\demanda.csv')
 
@@ -28,7 +34,7 @@ demanda_2022 = demanda["2022":]
 st.subheader('Evolución Demanda')
 st.line_chart(demanda_2022["Demanda"])
 
-st.title("Predicción del Precio de la Demanda (Gwh)")
+st.title("Predicción de la Demanda (Gwh)")
 
 with st.expander("ETS "):
     st.image(Image.open('..\pics\predemanda.png'))

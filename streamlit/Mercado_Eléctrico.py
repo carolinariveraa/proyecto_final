@@ -6,28 +6,33 @@ import warnings
 warnings.filterwarnings("ignore")
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
-from sklearn.metrics import mean_squared_error
-from math import sqrt
 import datetime
-import re
-import base64
 from PIL import Image
+import seaborn as sns
 
-#esto no funciona
+# Establecer el tema y los estilos
+st.markdown(
+    """
+    <style>
+    body {
+        color: #000000;
+        background-color: #ffffff;
+        font-family: serif;
+    }
 
-st.set_page_config(
-    page_title="Hola",
-   
+    .stTextInput, .stTextArea, .stNumberInput, .stSelectBox, .stColorPicker, .stCheckbox, .stRadio {
+        background-color: #e0d7c7 !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
+
+
 
 st.title("Mercado Eléctrico")
 
 st.image(Image.open('pics\por.jpeg'))
-
-st.markdown(
-    """
-"""
-    )
 
 with st.expander("Funcionamiento mercado Eléctrico Español"):
     st.markdown(""" 
@@ -58,9 +63,15 @@ euaspot.set_index("date", inplace=True)
 euaspot["date"] = euaspot.index
 euaspot.index = pd.DatetimeIndex(euaspot.index, dayfirst= True)
 
-st.subheader('Evolución Precio Eléctricidad 2014-2023')
+st.subheader('Evolución Precio Eléctricidad 2020-2023')
+
+
+
+euaspot = euaspot.loc["2020":]
+
 
 st.line_chart(euaspot["value"])
+
 
 st.title("¿Por qué sube la luz en 2021 y 2022?")
 
@@ -82,8 +93,5 @@ with st.expander("El precio del gas natural"):
 with st.expander("La guerra de Rusia y Ucrania"):
     st.write("Rusia es uno de los principales países exportadores de gas en Europa. Entre las sanciones económicas impuestas por la comunidad internacional a Moscú pasan por reducir su dependencia del gas y el petróleo ruso por lo que han provocado que el precio de la electricidad en el mercado mayorista ascienda notablemente.")
 
-st.title("Soluciones")
-
-st.write("Promover las fuentes de energía renovable para lograr una economía sin emisiones de efecto invernadero y reducir la dependencia del gas.")
 
 
