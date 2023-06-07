@@ -84,14 +84,14 @@ with st.expander("El COVID-19"):
 >  
 En 2021, la demanda de gas ha aumentado a medida que el mundo se recupera de la pandemia. Sin embargo, los proveedores de combustible no estaban preparados para esta rápida recuperación, lo que ha provocado una escasez de suministro de gas. Esta escasez de suministro, combinada con el aumento de la demanda, ha generado un incremento significativo en los precios de la energía a nivel global. Como resultado, estamos experimentando un aumento en nuestras facturas de luz mensuales debido a esta situación de escasez en el suministro de gas.""")
 
+with st.expander("La guerra de Rusia y Ucrania"):
+    st.write("Rusia es uno de los principales países exportadores de gas en Europa. Entre las sanciones económicas impuestas por la comunidad internacional a Moscú pasan por reducir su dependencia del gas y el petróleo ruso por lo que han provocado que el precio de la electricidad en el mercado mayorista ascienda notablemente.")
+
+
 with st.expander("El precio del petróleo"):
     st.write("La fuerte recuperación económica posterior a la crisis ha provocado un aumento de los precios del petróleo")
 
 with st.expander("El precio del gas natural"):
     st.write("El mercado marginalista establece que el proveedor con el precio más alto determina el precio final. Esto significa que el precio del gas natural tiene un impacto directo en el precio de la electricidad en todo el sistema. En el siguiente gráfico puedes ver que la gran subida de la electricidad en España se produce a partir de la segunda mitad de 2021 coincidiendo con el fuerte incremento del precio del gas en el mercado internacional. Tras un descenso moderado al inicio de 2022, el precio escala de nuevo al iniciarse el ataque ruso a Ucrania")
-
-with st.expander("La guerra de Rusia y Ucrania"):
-    st.write("Rusia es uno de los principales países exportadores de gas en Europa. Entre las sanciones económicas impuestas por la comunidad internacional a Moscú pasan por reducir su dependencia del gas y el petróleo ruso por lo que han provocado que el precio de la electricidad en el mercado mayorista ascienda notablemente.")
-
 
 
