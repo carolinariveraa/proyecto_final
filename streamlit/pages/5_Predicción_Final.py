@@ -1,8 +1,7 @@
+
+import warnings
 import streamlit as st
 import pandas as pd
-import numpy as np
-pd.options.display.max_columns = None
-import warnings
 warnings.filterwarnings("ignore")
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
@@ -12,16 +11,9 @@ import datetime
 import re
 import base64
 
-#esto no funciona
-
-st.set_page_config(
-    page_title="Hola",
-   
-)
-
 st.title("Predicción precio eléctricidad")
 
-st.write("El objetivo es ppredecir el precio de la eléctricidad para el día siguiente")
+st.title("Dataset final")
 
 dataset = pd.read_csv('data/dataset.csv')
 dataset = dataset.drop(columns=['Unnamed: 0'])
@@ -60,18 +52,3 @@ dataset = dataset.drop(columns=['Date'])
 
 # Mostrar los datos filtrados
 st.write(filtered_data)
-
-#plotting
-
-st.write("Evolución del precio de la electricidad")
-
-euaspot = pd.read_csv('..\clean_data\euaspot.csv')
-
-euaspot["date"] = pd.to_datetime(euaspot['date'])
-euaspot.set_index("date", inplace=True)
-euaspot["date"] = euaspot.index
-euaspot.index = pd.DatetimeIndex(euaspot.index, dayfirst= True)
-
-st.subheader('Evolución Precio Eléctricidad 2015-2023')
-
-st.line_chart(euaspot["value"])

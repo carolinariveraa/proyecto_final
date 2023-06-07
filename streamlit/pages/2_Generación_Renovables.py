@@ -9,12 +9,12 @@ from math import sqrt
 import datetime
 import re
 import base64
+from PIL import Image
 
 st.title("Generación de Energías Renovables")
 
-st.write("El objetivo es ppredecir el precio de la eléctricidad para el día siguiente")
-
 renovables = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\renovables_clean.csv')
+pred_renovables = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\pred_renovables.csv')
 
 renovables = renovables.drop(columns=['Unnamed: 0'])
 
@@ -60,6 +60,15 @@ with col2:
     st.pyplot(fig2)
 
 
+st.title("Predicción de la Generación de Energía por Tecnologia")
 
+st.image(Image.open('pics/renov.jpeg'))
+
+with st.expander("Prophet"):
+    st.image(Image.open('../pics/solar.png'))
+    st.image(Image.open('../pics/hidraulica.png'))
+        
+with st.expander("Predicciones: "):
+    st.dataframe(data=pred_renovables, width=None, height=None, use_container_width=False, hide_index=True, column_order=None, column_config=None)
 
 

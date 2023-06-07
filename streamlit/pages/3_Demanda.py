@@ -9,6 +9,7 @@ from math import sqrt
 import datetime
 import re
 import base64
+from PIL import Image
 
 st.title("Predicción Demanda")
 
@@ -21,6 +22,22 @@ demanda.set_index("Fecha", inplace=True)
 demanda["Fecha"] = demanda.index
 demanda.index = pd.DatetimeIndex(demanda.index, dayfirst= True)
 
-st.subheader('Evolución Demanda')
+# Filtrar los datos a partir de 2022
+demanda_2022 = demanda["2022":]
 
-st.line_chart(demanda["Demanda"])
+st.subheader('Evolución Demanda')
+st.line_chart(demanda_2022["Demanda"])
+
+st.title("Predicción del Precio de la Demanda (Gwh)")
+
+with st.expander("ETS "):
+    st.image(Image.open('..\pics\predemanda.png'))
+
+with st.expander("Métrica de evaluación"):
+
+        # Cajas independientes
+    st.info("MAPE: 0.07048366455511575")
+    st.success("MSE: 2792.8266611702916")
+    st.warning("RMSE: 52.847201072244985")
+
+
