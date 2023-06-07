@@ -38,6 +38,8 @@ with st.expander("Demanda de Energía"):
 
 st.subheader("Dataset final")
 
+st.write("Para la predicción final del precio de la eléctricidad se ha empleado una red neuronal, MLP Regressor")
+
 dataset = pd.read_csv('data/dataset.csv')
 dataset = dataset.drop(columns=['Unnamed: 0'])
 dataset = dataset.drop(columns=['weekend'])
