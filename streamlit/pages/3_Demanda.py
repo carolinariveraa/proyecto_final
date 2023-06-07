@@ -10,6 +10,7 @@ import datetime
 import re
 import base64
 from PIL import Image
+import seaborn as sns
 
 st.title("Demanda energetica Gwh")
 
@@ -33,6 +34,16 @@ demanda_2022 = demanda["2022":]
 
 st.subheader('Evolución Demanda')
 st.line_chart(demanda_2022["Demanda"])
+
+demanda_s2022 = demanda["2022"]
+
+st.subheader('Meses con mayor demanda')
+datos_mes = demanda_s2022.copy()
+datos_mes = pd.DataFrame(datos_mes.groupby(datos_mes['Fecha'].dt.strftime('%B'))['Demanda'].sum())
+
+datos_mes = datos_mes.sort_values(by="Demanda", ascending=False)
+
+st.bar_chart(datos_mes.sort_values(by="Demanda", ascending=False))
 
 st.title("Predicción de la Demanda (Gwh)")
 
