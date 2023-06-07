@@ -24,7 +24,7 @@ with st.expander("Precio del Gas Natural"):
         # Cajas independientes
     st.info("Muchas plantas de generación de energía utilizan gas natural como combustible. Si el precio del gas natural aumenta, se refleje en un aumento en el costo de generación de energía")
 
-with st.expander("Precio del Uranio"):
+with st.expander("Emisiones de CO2 CAMBIAR!!"):
 
     st.info("Si el precio del Uranio aumenta, será más costoso la generación de energía nuclear lo que se traduce en una subida del precio de la energía")
 

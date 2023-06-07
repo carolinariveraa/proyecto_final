@@ -34,6 +34,8 @@ st.markdown(
 """
 El objetivo de este proyecto es predecir el precio de la eléctricidad, para ello estudiaré las varibales que afectan el mercado eléctrico español y posteriormente se tratará de realizar una serie de predicciones mediante el uso de diversos modelos de Machine Learning y aprendizaje no suervisado.
 
+
+
 """
 )
 

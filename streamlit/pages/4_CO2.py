@@ -11,11 +11,11 @@ import re
 import base64
 from PIL import Image
 
-st.title("Precio del Uranio")
+st.title("Precio de las emisiones CO2")
 
 st.image(Image.open('pics/nuclear.jpeg'))
 
-with st.expander("El aumento de los precios del uranio puede ser atribuido a varios factores:"):
+with st.expander("El aumento del precio de las emisiones de CO2 se puede atribuir a varios factores CAMBIAR"):
 
         # Cajas independientes
     st.info("Demanda creciente: A medida que más países buscan aumentar su capacidad de generación de energía nuclear o ampliar sus programas existentes, la demanda de uranio aumenta.")
@@ -23,29 +23,29 @@ with st.expander("El aumento de los precios del uranio puede ser atribuido a var
     st.warning("Especulación en el mercado: Los inversores y especuladores pueden anticipar un aumento en la demanda futura o una escasez de suministro y comprar uranio como una inversión a largo plazo, lo que puede elevar los precios.")
     st.info("Cambios en las políticas nucleares: Las decisiones políticas y regulatorias también pueden tener un impacto en los precios del uranio.")
 
-uranio = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\uranio_clean.csv')
-uranio_pred = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\uranio_pred.csv')
+co2 = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\co2_clean.csv')
+co2_pred = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\co2_pred.csv')
 
-uranio["Date"] = pd.to_datetime(uranio['Date'])
-uranio.set_index("Date", inplace=True)
-uranio["Date"] = uranio.index
-uranio.index = pd.DatetimeIndex(uranio.index, dayfirst= True)
+co2["Date"] = pd.to_datetime(co2['Date'])
+co2.set_index("Date", inplace=True)
+co2["Date"] = co2.index
+co2.index = pd.DatetimeIndex(co2.index, dayfirst= True)
 
-st.subheader('Precio Uranio')
+st.subheader('Precio CO2')
 
-st.line_chart(uranio["Close"])
+st.line_chart(co2["CO2"])
 
-st.title("Predicción del Precio del Uranio")
+st.title("Predicción del Precio de las emisiones de CO2")
 
-with st.expander("Prophet"):
-    st.image(Image.open('..\pics\preduranio.png'))
+with st.expander("XGB Boosting"):
+    st.image(Image.open('..\pics\co2.png'))
 
 with st.expander("Métrica de evaluación"):
 
         # Cajas independientes
-    st.info("MAE: 0.28529821240702397")
-    st.success("MSE: 0.15712753227843093")
-    st.warning("RMSE: 0.39639315367250094")
+    st.success("RMSE: 1.7423092884529048")
+
 
 with st.expander("Predicciones: "):
-    st.dataframe(data=uranio_pred, width=None, height=None, use_container_width=False, hide_index=True, column_order=None, column_config=None)
+    st.dataframe(data=co2_pred, width=None, height=None, use_container_width=False, hide_index=True, column_order=None, column_config=None)
+

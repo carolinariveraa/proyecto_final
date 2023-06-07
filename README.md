@@ -70,7 +70,7 @@ El modelo que mejor se ajusta a la energía hidraulica y solar es Prophet
 ### Fuentes de información
 
 * Red Eléctrica de España (https://www.esios.ree.es/es)
-    - EUA Spot
+    - Precio de la eléctricidad
     - Potencia generada
     - Demanda
 
@@ -80,7 +80,6 @@ El modelo que mejor se ajusta a la energía hidraulica y solar es Prophet
     - Gas Natural
     - Derechos de emisión del CO2
     - Indice Brent 
-    - Uranio
 
 * Datos climatologicos 
 
