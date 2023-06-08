@@ -24,7 +24,11 @@ with st.expander("Precio del Gas Natural"):
         # Cajas independientes
     st.info("Muchas plantas de generación de energía utilizan gas natural como combustible. Si el precio del gas natural aumenta, se refleje en un aumento en el costo de generación de energía")
 
-with st.expander("Emisiones de CO2 CAMBIAR!!"):
+with st.expander("Precio de las emisiones de CO2"):
+
+    st.info(" ")
+
+with st.expander("Precio del Uranio"):
 
     st.info("Si el precio del Uranio aumenta, será más costoso la generación de energía nuclear lo que se traduce en una subida del precio de la energía")
 
@@ -40,8 +44,7 @@ st.subheader("Dataset final")
 
 st.write("Para la predicción final del precio de la eléctricidad se ha empleado una red neuronal, MLP Regressor")
 
-dataset = pd.read_csv('data/predsf.csv')
-dataset = dataset.drop(columns=['weekend'])
+dataset = pd.read_csv('../clean_data/finalprecio.csv')
 dataset = dataset.drop(columns=['Month'])
 dataset = dataset.drop(columns=['Weekday'])
 dataset = dataset.drop(columns=['Year'])
@@ -54,16 +57,23 @@ dataset.set_index("Date", inplace=True)
 dataset["Date"] = dataset.index
 
 #Adding a checkbox to be able to filter the dataframe
-
 # Obtener la lista de años, meses y días únicos
 years = dataset["Date"].dt.year.unique()
 months = dataset["Date"].dt.month.unique()
 days = dataset["Date"].dt.day.unique()
 
+# Dividir el espacio horizontal en dos columnas
+col1, col2, col3 = st.columns(3)
+
 # Seleccionar el año, el mes y el día
-selected_year = st.selectbox("Select year:", years)
-selected_month = st.selectbox("Select month:", months)
-selected_day = st.selectbox("Select day:", days)
+with col1:
+    selected_year = st.selectbox("Select year:", years)
+
+with col2:
+    selected_month = st.selectbox("Select month:", months)
+
+with col3:
+    selected_day = st.selectbox("Select day:", days)
 
 # Filtrar los datos según la selección del usuario
 filtered_data = dataset.loc[
@@ -76,3 +86,5 @@ dataset = dataset.drop(columns=['Date'])
 
 # Mostrar los datos filtrados
 st.write(filtered_data)
+
+
