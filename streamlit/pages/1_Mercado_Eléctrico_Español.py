@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import datetime
 from PIL import Image
-import seaborn as sns
+
 import base64
 
 
