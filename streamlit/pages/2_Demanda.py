@@ -14,6 +14,11 @@ import seaborn as sns
 
 st.title("Demanda energetica Gwh")
 
+st.markdown(
+    """
+A continuación, se realiza un análisis detallado de la variable de demanda eléctrica. Se examinan los patrones de consumo a lo largo del tiempo, se identifican tendencias estacionales y diarias, y se analizan los factores que influyen en la demanda eléctrica. Además, se ofrecen predicciones futuras del valor de la demanda eléctrica para cada día.    """
+)
+
 st.image(Image.open('pics/men.jpg'))
 
 st.markdown("""

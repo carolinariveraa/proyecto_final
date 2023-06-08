@@ -13,6 +13,10 @@ from PIL import Image
 
 st.title("Precio del precio del Uranio")
 
+st.markdown(
+    """
+Se investiga el mercado del uranio y su relación con la generación de energía nuclear. Se analizan los factores que afectan el precio del uranio, como la oferta y demanda mundial y las políticas internacionales. También se ofrecen predicciones futuras del valor del uranio para cada día.""")
+
 st.image(Image.open('pics/nuclear.jpeg'))
 
 with st.expander("El aumento del precio del Uranio se puede atribuir a varios factores"):

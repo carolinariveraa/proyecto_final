@@ -14,6 +14,11 @@ from PIL import Image
 
 st.title("Predicción precio eléctricidad")
 
+st.markdown(
+    """
+En esta página, se combinan todas las variables analizadas en las páginas anteriores. Se utiliza una red neuronal para realizar predicciones del precio de la electricidad en el mercado spot. Se integran las variables de demanda eléctrica, generación renovable, precio del gas natural, valor del CO2 y precio del uranio en un único dataframe. A partir de este dataframe, se realizan las predicciones diarias del precio de la electricidad utilizando la red neuronal entrenada.""")
+
+
 st.image(Image.open('pics/pig.jpg'))
 
 

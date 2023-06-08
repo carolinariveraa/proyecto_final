@@ -13,6 +13,11 @@ from PIL import Image
 
 st.title("Evolución del Precio del Gas Natural")
 
+st.markdown(
+    """
+Se exploran los factores que influyen en el precio del gas natural y su relación con el mercado eléctrico. Se examina la oferta y demanda interna, la disponibilidad de suministro y los precios internacionales. También se analiza la relación entre el precio del gas natural y el precio de la electricidad, y se ofrecen predicciones futuras del valor del gas natural para cada día.
+""")
+
 st.image(Image.open('pics\gasn.jpg'))
 
 st.markdown(

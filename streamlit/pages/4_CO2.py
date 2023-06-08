@@ -13,6 +13,10 @@ from PIL import Image
 
 st.title("Precio de las emisiones CO2")
 
+st.markdown(
+    """
+Se examina el impacto del dióxido de carbono en el mercado eléctrico español. Se exploran las políticas y regulaciones relacionadas con las emisiones de CO2, así como su influencia en el mercado eléctrico. Además, se presentan predicciones futuras del valor del CO2 para cada día.""")
+
 st.image(Image.open('pics/nuclear.jpeg'))
 
 with st.expander("El aumento del precio de las emisiones de CO2 se puede atribuir a varios factores CAMBIAR"):

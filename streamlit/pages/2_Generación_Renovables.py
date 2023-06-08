@@ -13,6 +13,12 @@ from PIL import Image
 
 st.title("Generación de Energías Renovables")
 
+st.markdown(
+    """
+Se analiza la contribución de las fuentes de energía renovable en el mercado eléctrico español. Se estudia el crecimiento de la generación renovable, las políticas y regulaciones que la impulsan, y su impacto en la reducción de emisiones. Asimismo, se presentan predicciones futuras del valor de generación renovable para cada día.
+
+""")
+
 renovables = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\renovables_clean.csv')
 pred_renovables = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\pred_renovables.csv')
 

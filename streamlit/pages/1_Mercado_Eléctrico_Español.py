@@ -32,6 +32,12 @@ st.markdown(
 
 st.title("Mercado Eléctrico")
 
+st.markdown(
+    """
+En esta página, se presenta un resumen sobre el precio de la electricidad en el mercado spot y el funcionamiento del mercado eléctrico español. También se exploran las causas que afectan la fluctuación del precio y se proporciona información relevante sobre el mercado eléctrico.
+    """
+)
+
 st.image(Image.open('pics\por.jpeg'))
 
 with st.expander("Funcionamiento mercado Eléctrico Español"):
