@@ -37,7 +37,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('pics/pet2.jpg')
+set_bg_hack('pet2.jpg')
 
 
 
