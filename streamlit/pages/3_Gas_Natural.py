@@ -10,6 +10,24 @@ import datetime
 import re
 import base64
 from PIL import Image
+import base64
+
+
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+add_bg_from_local('pics/pet2.jpg')
 
 st.title("Evolución del Precio del Gas Natural")
 
@@ -30,7 +48,6 @@ Por lo tanto, es necesario recurrir a la producción de electricidad mediante el
 
 """)
 
-st.write("El objetivo es ppredecir el precio de la eléctricidad para el día siguiente")
 
 gasn = pd.read_csv(r'C:\Users\river\Ironhack-data\proyecto_final\clean_data\gasnatural_clean.csv')
 
@@ -54,7 +71,7 @@ Debido a la falta de reservas suficientes, España depende de la importación de
 Además, cuando los proveedores de gas aumentan los precios, el costo de producción de las centrales de ciclo combinado también se incrementa, lo que tiene un impacto directo en el precio del megavatio. Dado que el mercado mayorista sigue un modelo marginalista, el precio final de la electricidad por hora está vinculado al precio del combustible más costoso necesario para satisfacer la demanda prevista durante ese período. En este caso, el gas juega un papel fundamental en la determinación del precio del mercado eléctrico en la mayoría de los casos.
 """)
 
-st.title("Predicción del Precio del Gas Natural")
+st.subheader("Predicción")
 
 with st.expander("XGB Regressor"):
     st.image(Image.open('..\pics\predicciongasn.png'))

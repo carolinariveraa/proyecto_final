@@ -10,14 +10,30 @@ import datetime
 import re
 import base64
 from PIL import Image
+import base64
 
-st.title("Precio del precio del Uranio")
+
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+add_bg_from_local('pics/pet2.jpg')
+
+st.title("Precio del Uranio")
 
 st.markdown(
     """
 Se investiga el mercado del uranio y su relación con la generación de energía nuclear. Se analizan los factores que afectan el precio del uranio, como la oferta y demanda mundial y las políticas internacionales. También se ofrecen predicciones futuras del valor del uranio para cada día.""")
-
-st.image(Image.open('pics/nuclear.jpeg'))
 
 with st.expander("El aumento del precio del Uranio se puede atribuir a varios factores"):
 
@@ -35,11 +51,11 @@ uranio.set_index("Date", inplace=True)
 uranio["Date"] = uranio.index
 uranio.index = pd.DatetimeIndex(uranio.index, dayfirst= True)
 
-st.subheader('Precio Uranio')
+st.subheader('Evolución')
 
 st.line_chart(uranio["Close"])
 
-st.title("Predicción del Precio del Uranio")
+st.subheader("Predicción")
 
 with st.expander("Prophet"):
     st.image(Image.open('..\pics\preduranio.png'))

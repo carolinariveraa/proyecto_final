@@ -10,6 +10,24 @@ import datetime
 import re
 import base64
 from PIL import Image
+import base64
+
+
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+add_bg_from_local('pics/pet2.jpg')
 
 st.title("Generación de Energías Renovables")
 
@@ -74,7 +92,7 @@ with st.expander("Prophet"):
     st.image(Image.open('../pics/solar.png'))
     st.image(Image.open('../pics/hidraulica.png'))
         
-with st.expander("Predicciones: "):
+with st.expander("Predicciones"):
     st.dataframe(data=pred_renovables, width=None, height=None, use_container_width=False, hide_index=True, column_order=None, column_config=None)
 
 

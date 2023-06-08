@@ -11,6 +11,24 @@ import re
 import base64
 from PIL import Image
 import seaborn as sns
+import base64
+
+
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+add_bg_from_local('pics/pet2.jpg')
 
 st.title("Demanda energetica Gwh")
 
@@ -19,7 +37,7 @@ st.markdown(
 A continuación, se realiza un análisis detallado de la variable de demanda eléctrica. Se examinan los patrones de consumo a lo largo del tiempo, se identifican tendencias estacionales y diarias, y se analizan los factores que influyen en la demanda eléctrica. Además, se ofrecen predicciones futuras del valor de la demanda eléctrica para cada día.    """
 )
 
-st.image(Image.open('pics/men.jpg'))
+st.subheader("Demanda de energía en el mercado Español")
 
 st.markdown("""
 La predicción de la demanda en el mercado eléctrico español es una herramienta importante para planificar y gestionar eficientemente la generación y distribución de energía eléctrica.
@@ -37,7 +55,7 @@ demanda.index = pd.DatetimeIndex(demanda.index, dayfirst= True)
 # Filtrar los datos a partir de 2022
 demanda_2022 = demanda["2022":]
 
-st.subheader('Evolución Demanda')
+st.subheader('Evolución de la Demanda')
 st.line_chart(demanda_2022["Demanda"])
 
 demanda_s2022 = demanda["2022"]
@@ -50,7 +68,7 @@ datos_mes = datos_mes.sort_values(by="Demanda", ascending=False)
 
 st.bar_chart(datos_mes.sort_values(by="Demanda", ascending=False))
 
-st.title("Predicción de la Demanda (Gwh)")
+st.subheader("Predicción (Gwh)")
 
 with st.expander("ETS "):
     st.image(Image.open('..\pics\predemanda.png'))
