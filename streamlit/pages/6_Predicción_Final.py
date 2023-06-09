@@ -141,3 +141,7 @@ with st.expander("Métrica de evaluación"):
         # Cajas independientes
     st.info("RMSE: 9.814")
 
+with st.expander("Predicción vs Realidad"):
+
+        # Cajas independientes
+    st.image(Image.open('pics/pred.png'))
