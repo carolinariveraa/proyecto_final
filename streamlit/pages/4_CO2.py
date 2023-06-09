@@ -90,7 +90,12 @@ st.subheader('Evolución')
 
 st.line_chart(co2["CO2"])
 
-st.title("Predicción del Precio de las emisiones de CO2")
+st.subheader("Predicción del Precio de las emisiones de CO2")
+
+with st.expander("Correlación"):
+
+        # Cajas independientes
+    st.image(Image.open('pics/co2vsprice.png'))
 
 with st.expander("XGB Boosting"):
     st.image(Image.open('..\pics\co2.png'))
@@ -101,6 +106,4 @@ with st.expander("Métrica de evaluación"):
     st.success("RMSE: 1.7423092884529048")
 
 
-with st.expander("Predicciones"):
-    st.dataframe(data=co2_pred, width=None, height=None, use_container_width=False, hide_index=True, column_order=None, column_config=None)
 

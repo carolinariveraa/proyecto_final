@@ -68,6 +68,11 @@ st.line_chart(uranio["Close"])
 
 st.subheader("Predicción")
 
+with st.expander("Correlación"):
+
+        # Cajas independientes
+    st.image(Image.open('pics/uraniovsprice.png'))
+
 with st.expander("Prophet"):
     st.image(Image.open('..\pics\preduranio.png'))
 
@@ -79,6 +84,5 @@ with st.expander("Métrica de evaluación"):
     st.info("RMSE: 0.39639315367250094")
 
 
-with st.expander("Predicciones: "):
-    st.dataframe(data=uranio_pred, width=None, height=None, use_container_width=False, hide_index=True, column_order=None, column_config=None)
+
 

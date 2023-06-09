@@ -103,7 +103,6 @@ with st.expander("Prophet"):
     st.image(Image.open('../pics/solar.png'))
     st.image(Image.open('../pics/hidraulica.png'))
         
-with st.expander("Predicciones"):
-    st.dataframe(data=pred_renovables, width=None, height=None, use_container_width=False, hide_index=True, column_order=None, column_config=None)
+
 
 

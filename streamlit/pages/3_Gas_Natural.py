@@ -84,11 +84,15 @@ Además, cuando los proveedores de gas aumentan los precios, el costo de producc
 
 st.subheader("Predicción")
 
+with st.expander("Correlación"):
+
+        # Cajas independientes
+    st.image(Image.open('pics/gasnvsprice.png'))
+
 with st.expander("XGB Regressor"):
     st.image(Image.open('..\pics\predicciongasn.png'))
 
 with st.expander("Métrica de evaluación"):
     st.info("RMSE: 0.1258")
 
-with st.expander("Predicciones: "):
-    st.dataframe(data=gasn_pred, width=None, height=None, use_container_width=False, hide_index=True, column_order=None, column_config=None)
+

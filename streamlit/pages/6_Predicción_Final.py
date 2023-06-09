@@ -61,11 +61,7 @@ with st.expander("Precio del Gas Natural"):
 
 with st.expander("Precio de las emisiones de CO2"):
 
-    st.markdown("""
-    En la actualidad, la producción de energía renovable no es suficiente para satisfacer la creciente demanda de electricidad. Esto implica que se siga dependiendo de la generación de energía en centrales de ciclo combinado, las cuales deben adquirir derechos de emisión de CO2 en el mercado de Régimen de Comercio de Derechos de Emisión para poder llevar a cabo su actividad y emitir a la atmósfera. Con los precios actuales de los derechos de emisión de CO2, esto se traduce en un incremento de aproximadamente 20 euros por megavatio hora (MWh) en el costo de producción de electricidad.
-
-En resumen, mientras las centrales de ciclo combinado continúen siendo los principales actores en la generación eléctrica, el precio del CO2 seguirá teniendo un impacto significativo en el costo de la electricidad. Esta situación se mantendrá en el corto o medio plazo hasta que se logre cubrir la mayor parte de la demanda con fuentes de energía renovable y energía nuclear.
-      """)
+    st.info("En la actualidad, la producción de energía renovable no es suficiente para satisfacer la creciente demanda de electricidad. Esto implica que se siga dependiendo de la generación de energía en centrales de ciclo combinado, las cuales deben adquirir derechos de emisión de CO2 en el mercado de Régimen de Comercio de Derechos de Emisión para poder llevar a cabo su actividad y emitir a la atmósfera. En resumen, mientras las centrales de ciclo combinado continúen siendo los principales actores en la generación eléctrica, el precio del CO2 seguirá teniendo un impacto significativo en el costo de la electricidad.")
 
 with st.expander("Precio del Uranio"):
 

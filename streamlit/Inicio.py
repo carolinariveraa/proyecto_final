@@ -66,7 +66,7 @@ st.markdown(
 
 El motivo por el cual decidí embarcarme en este proyecto es por mi interés en comprender el mercado eléctrico y su funcionamiento. Considero que el conocimiento de las variables que influyen en el precio de la electricidad es de gran utilidad tanto para las empresas del sector como para los consumidores, ya que les permite tomar decisiones informadas y optimizar sus estrategias.
 
-A lo largo de este proyecto, analizaremos datos históricos del mercado eléctrico español y exploraremos diferentes modelos de Machine Learning, como regresión lineal, redes neuronales y random forest, para encontrar el modelo que mejor se ajuste a los datos y nos brinde las predicciones más precisas.
+A lo largo de este proyecto, analizaremos datos históricos del mercado eléctrico español y exploraremos diferentes modelos de Machine Learning, para encontrar el modelo que mejor se ajuste a los datos y nos brinde las predicciones más precisas.
 
 Espero que este proyecto sea de utilidad tanto para las empresas del sector eléctrico como para los consumidores, y que nos permita comprender mejor el comportamiento del mercado eléctrico y anticiparnos a sus fluctuaciones de precio.
 """

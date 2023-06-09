@@ -79,6 +79,18 @@ El modelo que mejor se ajusta a la energía hidraulica y solar es Prophet
 ![prediccionuranio](./pics/solar.png)
 </details>
 
+## Predicción final
+
+
+Para llevar a cabo la predicción final del precio de la electricidad, se ha utilizado una red neuronal conocida como MLP Regressor. 
+
+
+Utilizando todas estas variables, se ha entrenado y ajustado la MLP Regressor para que pueda aprender los patrones y relaciones entre las variables y el precio de la electricidad. Una vez que el modelo está entrenado, se emplea para realizar predicciones futuras del precio de la electricidad en función de los valores de las variables.
+
+Este enfoque basado en redes neuronales permite obtener predicciones más precisas y adaptativas, ya que la MLP Regressor es capaz de capturar patrones complejos y no lineales en los datos. De esta manera, esperamos proporcionar una herramienta útil para predecir el precio de la electricidad y ayudar a las empresas y consumidores a tomar decisiones informadas en el mercado eléctrico.
+
+
+
 
 ### Fuentes de información
 
