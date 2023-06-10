@@ -26,7 +26,7 @@ El objetivo principal del trabajo es conocer el precio de la electricidad para e
 
 # Metodología
 
-### Dataset
+### Dataframe
 
 Para conocer el precio de la electricidad se van a realizar predicciones previas sobre:
 
@@ -34,52 +34,19 @@ Para conocer el precio de la electricidad se van a realizar predicciones previas
 - Demanda, 
 - Precio de las emisiones de CO2 
 - Precio del Gas Natural
+- Precio del Uranio
 
 Por lo tanto se han hecho modelos de Machine Learning para predecir cada una de estas variables y con el conjunto obtener el precio de la electricidad para el día siguiente. La justificación de este método es que la energía en España se compone principalmente de las renovables, la nuclear y del gas natural. Por lo tanto estas variables tienen una alta correlación con el precio de la electricidad.
 
-Para llevar a cabo la predicción final del precio de la electricidad, se ha utilizado una red neuronal conocida como MLP Regressor. Esta red neuronal, que significa Multi-Layer Perceptron Regressor, es un tipo de modelo de aprendizaje automático que se utiliza para resolver problemas de regresión, como la predicción de valores numéricos.
-
+Para llevar a cabo la predicción final del precio de la electricidad, se ha utilizado una red neuronal conocida como MLP Regressor. Esta red neuronal, es un tipo de modelo de aprendizaje automático que se utiliza para resolver problemas de regresión.
 
 ### Evolución precio de la eléctricidad en España 
 
 ![preciomwh](./pics/preciomwh.png)
 
-<details>
-<summary>Predicción Demanda</summary>
-
-El modelo que mejor se ajusta a la demanda es ETS ya que tiene un periodo estacional de 7 días
-
-![demanda](./pics/predemanda.png)
-
-</details>
-
-<details>
-<summary>Predicción precio Gas Natural</summary>
-
-Tas probar distintos modelos el que mejor se ajusta a la realidad es el XGB Boosting, se muestran los resultados para los próximos cinco días
-
-![preciomwh](./pics/predicciongasn.png)
-
-rmse: 0.1258590053674676
-</details>
-
-<details>
-<summary>Predicción precio Uranio</summary>
-
-![prediccionuranio](./pics/prediccionuranio.png)
-</details>
-
-<details>
-<summary>Predicción energías renovables</summary>
-
-El modelo que mejor se ajusta a la energía hidraulica y solar es Prophet 
-
-![prediccionuranio](./pics/hidraulica.png)
-
-![prediccionuranio](./pics/solar.png)
-</details>
 
 ## Predicción final
+
 
 
 Para llevar a cabo la predicción final del precio de la electricidad, se ha utilizado una red neuronal conocida como MLP Regressor. 
@@ -89,8 +56,14 @@ Utilizando todas estas variables, se ha entrenado y ajustado la MLP Regressor pa
 
 Este enfoque basado en redes neuronales permite obtener predicciones más precisas y adaptativas, ya que la MLP Regressor es capaz de capturar patrones complejos y no lineales en los datos. De esta manera, esperamos proporcionar una herramienta útil para predecir el precio de la electricidad y ayudar a las empresas y consumidores a tomar decisiones informadas en el mercado eléctrico.
 
+<details>
+  <summary>Resultados</summary>
+  <br>
 
+![prediccionuranio](./pics/pred.png)
+</details>
 
+ <br>
 
 ### Fuentes de información
 
